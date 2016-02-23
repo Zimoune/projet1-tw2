@@ -1,0 +1,12 @@
+#carteCampus {
+    min-height: 300px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+body{
+    background-color: #3E9ACC;
+}
