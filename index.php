@@ -49,21 +49,25 @@ function displayPostes(){
     <title>Projet météo</title>
 
     <meta name="description" content="Projet S4 TW2">
-    <meta name="author" content="Simon Le Pallac">
+    <meta name="author" content="Simon Le Pallac & Valentin Poupart">
 
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <link rel="stylesheet" href="resources/css/bootstrap-datepicker3.min.css" />
     <link rel="stylesheet" href="resources/css/style.css" />
-
-    <!-- JS -->
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 </head>
 <body>
+    <ul class="nav">
+        <li class="active">
+            <a href="#">Stat1</a>
+        </li>
+        <li>
+            <a href="#">Stat2</a>
+        </li>
+        <li>
+            <a href="#">Crédits</a>
+        </li>
+    </ul>
 
-<div class="container-fluid">
     <ul id="listePostes">
         <?php
 
@@ -72,10 +76,6 @@ function displayPostes(){
         ?>
     </ul>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-12">
                     <form id="formStation">
                         <select id="station" name="slist" size="10" form="formStation">
 
@@ -88,11 +88,6 @@ function displayPostes(){
                         </span>
                     </div>
                     <button onclick="displayStat1()">Stat 1</button>
-                   <!-- <button>Stat 2</button>-->
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
             <h3 id="stat-title">Statistiques</h3>
             <table id="stat1" class="table table-bordered table-hover">
                 <thead>
@@ -118,19 +113,8 @@ function displayPostes(){
 
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-                <div id="carteCampus"></div>
-        </div>
-    </div>
-</div>
+            <div id="carteCampus"></div>
 
-<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="resources/js/moment.min.js"></script>
-<script src="resources/js/bootstrap.min.js"></script>
-<script src="resources/js/bootstrap-datepicker.min.js"></script>
 <script src="resources/js/scriptCarte.js"></script>
 <script src="resources/js/script.js"></script>
 </body>

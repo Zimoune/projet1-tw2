@@ -7,6 +7,22 @@ ul
     list-style-type: none;
 }
 
+ul.nav {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav li{
+    display: inline;
+}
+
 body{
     background-color: #3E9ACC;
+}
+
+.container-fluid{
+    margin-bottom: 75px;
 }
