@@ -53,21 +53,33 @@ function displayPostes(){
 
     <!-- CSS -->
     <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="resources/img/favicons/favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="resources/img/favicons/favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="resources/img/favicons/favicon-96.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="resources/img/favicons/favicon-196.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="resources/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resources/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="resources/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resources/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="resources/img/favicons/apple-touch-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="resources/img/favicons/favicon-144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <!-- JS -->
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 </head>
 <body>
-    <ul class="nav">
-        <li class="active">
+<nav>
             <a href="#">Stat1</a>
-        </li>
-        <li>
             <a href="#">Stat2</a>
-        </li>
-        <li>
             <a href="#">Crédits</a>
-        </li>
-    </ul>
-
+</nav>
     <ul id="listePostes">
         <?php
 
@@ -82,10 +94,7 @@ function displayPostes(){
                         </select>
                     </form>
                     <div class='input-group date' id='datepicker'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
+                        <input type='date' name="date" class="form-control" />
                     </div>
                     <button onclick="displayStat1()">Stat 1</button>
             <h3 id="stat-title">Statistiques</h3>

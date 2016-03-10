@@ -5,6 +5,7 @@
 ul
 {
     list-style-type: none;
+    text-align: center;
 }
 
 ul.nav {
@@ -13,10 +14,12 @@ ul.nav {
     top: 0;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 ul.nav li{
     display: inline;
+    margin-left: 50px;
 }
 
 body{

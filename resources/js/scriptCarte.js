@@ -18,12 +18,14 @@ function dessinerCarte(){
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    $("#listePostes li").each(function() {
-        L.marker([$(this).data("latitude"), $(this).data("longitude")]).addTo(map)
-            .bindPopup($(this).data("nom")+"<br><button type='button' data-id='"+$(this).data("id")+"' value='"+$(this).data("nom")+"'>Choisir</button>");
-    });
 
+    var elems = document.getElementById("listePostes").getElementsByTagName("li");
 
+    for(var i = 0; i<elems.length; i++){
+        L.marker([elems[i].dataset.latitude, elems[i].dataset.longitude]).addTo(map)
+            .bindPopup(elems[i].dataset.nom+"<br><button type='button' data-id='"+elems[i].dataset.id+"' value='"
+                +elems[i].dataset.id+"'>Choisir</button>");
+    }
 
     // Mise en place d'une gestionnaire d'Ã©vÃ¨nement : activerBouton se dÃ©clenchera Ã  chaque ouverture de popup
     map.on("popupopen",activerBouton);
@@ -44,8 +46,8 @@ function activerBouton(ev) {
 // gestionnaire d'Ã©vÃ¨nement (dÃ©clenchÃ© lors d'un click sur le bouton dans un popup)
 function boutonActive(ev) {
     // this est ici le noeud DOM de <button>. La valeur associÃ©e au bouton est donc this.value
-    //alert("Vous avez choisi : " + this.value);
-    $('#station').find("option[value="+$(this).data("id")+"]").attr("selected", "selected");
+    var stations = document.getElementById("station").getElementsByTagName("option");
+    document.getElementById("station").value = this.value;
 }
 
 function afficheCoord(ev) {
