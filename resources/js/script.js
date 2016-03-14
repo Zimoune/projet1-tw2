@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-
     //Remplissage du select des stations
     var elems = document.getElementById("listePostes").getElementsByTagName("li");
     var optionsList = "";
@@ -49,6 +48,7 @@ function displayStat1(){
             document.getElementById("stat-title").innerHTML = "Statistique du " + date[2]+"/"+date[1]+"/"+date[0]+" pour "+stationName;
 
             //On recupere le resultat et on l'affiche
+            console.log("toto");
             var response = JSON.parse(xhttp.responseText);
             for (i = 0; i<response.length; i++){
                 var row = tableBody[0].insertRow(-1);

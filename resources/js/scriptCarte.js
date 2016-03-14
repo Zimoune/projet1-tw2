@@ -1,6 +1,3 @@
-/**
- * Created by simon on 22/02/2016.
- */
 window.addEventListener("load",dessinerCarte);
 
 var map;

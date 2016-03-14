@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: simon
- * Date: 22/02/2016
- * Time: 16:37
- */
+
 define("LINK_MF", "compress.zlib://https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.");
 define("EXT", ".csv.gz");
 
-//include("proxySettings.php");
+include("proxySettings.php");
 
 $station = "".$_GET["station"]."";
 $year = "".$_GET["year"]."";
@@ -31,7 +26,7 @@ $day = str_pad($day, 2, '0', STR_PAD_LEFT);
                 //Recuperation de la bonne station
                 if($data[0] == $station && substr($data[1], 0, 8 ) == $year.$month.$day){
                     $tab = array();
-                    for( $i = 0; $i< count($order); $i++){
+                    for( $i = 0; $i < count($order); $i++){
                         $tab[$order[$i]] = $data[$i];
                     }
                     array_push($result, $tab);

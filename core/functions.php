@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: simon
- * Date: 22/02/2016
- * Time: 11:42
- */
 define("LINK_MF", "compress.zlib://https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.");
 define("EXT", ".csv.gz");
 define("LINK_POSTES", "../resources/postesSynop.csv");
